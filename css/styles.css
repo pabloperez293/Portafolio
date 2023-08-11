@@ -268,7 +268,8 @@ img{
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
 }
-/* skill */
+/*-------- skill */
+
 .skillsContainer{
     row-gap: 3.5rem;
 }
@@ -291,4 +292,86 @@ img{
 .skillsData{
     justify-content: center;
     text-align: center;
+}
+.skillsBlob{
+    width: 80px;
+    height: 100px;
+    background-color: var(--container-color);
+    border-radius: 3rem;
+    place-items: center;
+    margin-bottom: 1rem;
+}
+.skillsBlob img{
+    width: 40px;
+}
+.skillsName{
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+.skillsSubtitle{
+    font-size: var(--tiny-font-size);
+    color: var(--text-color-light);
+}
+
+/* ---------> Animacion de skills  */
+.skillsBlob:hover img{
+    animation: bounce-skills .6s;
+}
+@keyframes bounce-skills{
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translateY(6px);
+    }
+    40%{
+        transform: translate(0);
+    }
+    60%{
+        transform: translateY(3px);
+    }
+    80%{
+        transform: translate(0);
+    }
+}
+
+/* ------->Calificacion  */
+.qualification{
+    position: relative;
+}
+.qualificationContainer{
+    row-gap: 3.5rem;
+}
+.qualificationTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 2rem;
+}
+.qualificationTitle i{
+    font-size: 1rem;
+    font-weight: initial;
+}
+.qualificationInfo{
+    display: grid;
+    row-gap: 2rem;
+}
+.qualificationName{
+    font-size: var(--normal-font-size);
+    margin-bottom: 1.25rem;
+}
+.qualificationCountry, .qualificationYear{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+.qualificationCountry{
+    margin-bottom: .75rem;
+}
+.qualificationImg{
+    width: 150px;
+    posi
 }

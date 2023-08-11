@@ -1,0 +1,294 @@
+/*  Google fonts  */
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* Variables CSS */
+:root{
+    --header-height:3.5rem;
+
+/* Colores */
+--primer-color:hsl(207,65%, 65%);
+--title-color:hsl(207,4%, 16%);
+--text-color:hsl(207,4%, 28%);
+--text-color-light:hsl(207,4%, 56%);
+--body-color:hsl(207,4%, 99%);
+--container-color:hsl(207,4%, 95%);
+
+/* tipografias de fuentes */ 
+    --body-font: 'Roboto', sans-serif;
+    --title-font: 'Lora', serif;
+    --biggest-font-size: 1.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size:.932rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+
+/* -gradiente */
+--gradient-color: linear-gradient(180deg, hsla(207,48%,72%, 0 ), hsña(207, 65%, 65%, 1));
+
+/*  z-index----- */
+--z-nomal: 1;
+--z-tooltip: 10;
+--z-fixed: 100;
+
+/*  peso  de fuente */
+
+--font-medium: 500;
+--font-semi-bold: 600;
+
+
+}
+/* Responsive */
+@media screen and (min-width: 1024px){
+    :root{
+        --biggest-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+        --tiny-font-size: .688rem;
+    }    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color:  var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* css clases */
+.container{
+    max-width: 1024px;
+    margin-inline: 1.5rem;
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.section{
+    padding-block: 2.5rem;
+}
+.sectionBorder{
+    border-bottom: 1px solid var(--title-color);
+    padding-bottom: 3.5rem;
+}
+.sectionTitle, .sectionSubtitle{
+    text-align: center;
+}
+.sectionTitle{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: .25rem;
+}
+.sectionSubtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 3rem;
+}
+/*  animacion*/
+.main{
+    overflow: hidden; 
+}
+
+/* Nav y Header */
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+.nav{
+    height: calc(--header-height) + .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 20px hsla(207,24%,35%, .1);
+    padding-inline: 1.5rem;
+    border-radius: 3rem;
+}
+
+.navLogo, .navToggle , .navClose{
+    color: var(--title-color);
+}
+.navLogo{
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+.navToggle{
+    display: flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+@media screen and (max-width: 1023px){
+    .navMenu{
+        position: fixed;
+        width: 88%;
+        left: 0;
+        right: 0;
+        bottom: -60%;
+        margin: 0 auto;
+        background-color: var(--body-color);
+        box-shadow: 0 4px 20px hsla(207,24%,35%, .1);
+        padding: 2rem 1.5rem 5rem;
+        border-radius: 2rem;
+        transition: bottom .3s;
+    }    
+}
+
+.navList{
+    grid-template-columns: repeat(3 , max-content);
+    justify-content: center;
+    gap: 2rem 3rem;
+}
+.navLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .25rem;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    transition: .3s;
+}
+.navLink:hover{
+    color: var(--title-color);
+}
+.navLink i{
+    font-size: 1.25rem;
+}
+.navClose{
+    position: absolute;
+    right: 1.5rem;
+    bottom: .7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Show menu*/
+.showMenu{
+    bottom: 2rem;
+}
+
+/* home */
+.homeContainer{
+    row-gap: 4rem;
+    padding-top: 2rem;
+}
+.homeData{
+    row-gap: 1.5rem;
+}
+.homeTitle{
+    text-align: center;
+    font-size: var(--biggest-font-size);
+    letter-spacing: .3px;
+    margin-bottom: .5rem;
+}
+.homeBlob{
+    position: relative;
+    width: 190px;
+    height: 228px;
+    background-color: var(--body-color);
+    border: 2px solid var(--text-color-light);
+    justify-self: center;
+    border-radius: 6.25rem;
+    place-items: center;
+}
+.homePerfil{
+    width: 170px;
+    height: 210px;
+    background: var(--gradient-color);
+    border-radius: 5.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.homeSocial{
+    justify-self: center;
+    display: flex;
+    column-gap: 1.25rem;
+}
+.homeSocial-Link{
+    font-size: 1.25rem;
+    color: var(--text-color-light);
+    transition: color .3s;
+}
+.homeInfo{
+    display: grid;
+    row-gap: 2rem;
+}
+.homeInfo-title{
+    font-family: var(--body-font);
+    font-size: var(--smaller-font-size);
+    font-weight: 400;
+    color: var(--text-color-light);
+    margin-bottom: 1rem;
+}
+.homeInfo-description, .homeInfo-number{
+    font-family: var(--title-font);
+    color: var(--title-color);
+}
+.homeInfo-description{
+    padding-right: 4rem;
+}
+.homeInfo-number{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
+/* skill */
+.skillsContainer{
+    row-gap: 3.5rem;
+}
+.skillsTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 2.5rem;
+}
+.skillsInfo, .skillsData, .skillsBlob{
+    display: grid;
+}
+.skillsInfo{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+}
+.skillsData{
+    justify-content: center;
+    text-align: center;
+}

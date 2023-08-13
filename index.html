@@ -10,6 +10,9 @@
 <!-- Nav icon -->
 <link rel="shortcut icon" href="img/coffee.png" type="image/x-icon">
 
+<!-- Swipper css -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
 <title>Pagina personal</title>
 </head>
 <body>
@@ -414,28 +417,81 @@
         <!-- ------------ Paginas -->
         <section class="projects section" id="projects">
             <h2 class="sectionTitle">Paginas</h2>
-            <span class="sectionSubtitle">proyectos recientes </span>
+            <span class="sectionSubtitle">Proyectos recientes </span>
 
             <div class="container sectionBorder">
-                <div class="projectsContainer">
-                    <div>
+                <div class="projectsContainer swiper">
+                    <div class="swiper-wrapper">
                         <!-- ------------ Paginas 1-->
-                        <div class="projectContent">
-                            <img src="" alt="projects image" class="projectsImg">
+                        <div class="projectContent swiper-slide">
+                            <img src="img/pokedx.jpeg" alt="projects image" class="projectsImg">
                             <div>
-                                <span class="projectsSubtitle"></span>
-                                <h1 class="projectstitle">
-                                    
-                                </h1>
+                                <span class="projectsSubtitle">Pagina pokedex</span>
+                                <h1 class="projectstitle">  Consumiendo API  </h1>
+                                <a href="#" class="projectsBtn">
+                                   ver <i class="ri-arrow-right-circle-line"></i>
+                                </a>
                             </div>
                         </div>
 
+                        <!-- ------------ Paginas 2-->
+                        <div class="projectContent swiper-slide">
+                            <img src="img/landing.jpeg" alt="projects image" class="projectsImg">
+                            <div>
+                                <span class="projectsSubtitle">Pagina Web</span>
+                                <h1 class="projectstitle"> Landing </h1>
+                                <a href="#" class="projectsBtn">
+                                   ver <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ------------ Paginas 3-->
+                        <div class="projectContent swiper-slide">
+                            <img src="img/card.jpeg " alt="projects image" class="projectsImg">
+                            <div>
+                                <span class="projectsSubtitle">Pagina web</span>
+                                <h1 class="projectstitle"> Tarjeta form  </h1>
+                                <a href="#" class="projectsBtn">
+                                   ver <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ------------ Paginas 4-->
+                        <div class="projectContent swiper-slide">
+                            <img src="img/test.jpeg" alt="projects image" class="projectsImg">
+                            <div>
+                                <span class="projectsSubtitle">Pagina web</span>
+                                <h1 class="projectstitle">Tarjeta presentacion    </h1>
+                                <a href="#" class="projectsBtn">
+                                   ver <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+            <!--  ------------- Swippers -->
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-fill"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-fill"></i>
+                    </div>
+            <!-- -------------- Swipper Pagination -->
+                    <div class="swiper-pagination"></div>
+
+
                 </div>
             </div>
-
-
         </section>
+
+
+
+
+
+
+
+
     </main>
 <!-- footer -->
 <footer class="footer">
@@ -443,7 +499,9 @@
 </footer>
 <!-- scrooll -->
 
-
+<!-- Swiper javascript -->
+<script src="js/swiper-bundle.min.js"></script>
+<!--  Main  javascript-->
 <script src="js/main.js"></script>
 </body>
 </html>

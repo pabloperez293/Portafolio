@@ -418,3 +418,73 @@ img{
     opacity: 1;
 }
 
+/*  -------------> Proyectos */
+.projectsContainer{
+    overflow: initial;
+}
+.projectContent{
+    display: grid;
+    justify-content: center;
+}
+.projectsImg{
+    width: 250px;
+    border-radius: .75rem;
+    margin-bottom: 1.25rem;
+}
+.projectsSubtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+.projectsTitle{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.25rem;
+    margin: .5rem 0 1.25rem;
+}
+.projectsBtn{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+}
+.projectsBtn i{
+    font-size: 1rem;
+    transition: transform .3s ;
+}
+.projectsBtn:hover i{
+    transform: translateX(.25rem);
+}
+/*  -- Swipper clases--- */
+.projectsContainer .swiper-button-prev::after,
+.projectsContainer .swiper-button-next::after{
+    content: "";
+}
+.projectsContainer .swiper-button-prev,
+.projectsContainer .swiper-button-next{
+    width: initial;
+    height: initial;
+    margin: initial;
+    font-size: 2.5rem;
+    color: var(--title-color);
+}
+.projectsContainer .swiper-button-prev{
+    left: -1rem;
+    top: 4.5rem;
+}
+.projectsContainer .swiper-button-next{
+    right: -1rem;
+    top: 4.5rem;
+}
+.projectsContainer .swiper-slide{
+    margin-bottom: 4.5rem;
+}
+.projectsContainer .swiper-pagination-bullets{
+    bottom: 0;
+}
+.projectsContainer .swiper-pagination-bullet{
+    background-color: var(--text-color-light);
+    opacity: initial;
+}
+.projectsContainer .swiper-pagination-bullets-active{
+    background-color: var(--title-color);
+}

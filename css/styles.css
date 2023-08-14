@@ -454,10 +454,12 @@ img{
 .projectsBtn:hover i{
     transform: translateX(.25rem);
 }
+
 /*  -- Swipper clases--- */
+
 .projectsContainer .swiper-button-prev::after,
 .projectsContainer .swiper-button-next::after{
-    content: "";
+    content: '';
 }
 .projectsContainer .swiper-button-prev,
 .projectsContainer .swiper-button-next{
@@ -488,3 +490,121 @@ img{
 .projectsContainer .swiper-pagination-bullets-active{
     background-color: var(--title-color);
 }
+/* ---------Contacto -> Form */
+.contactContainer{
+    row-gap: 3.5rem;
+}
+.contactTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 2.5rem;
+}
+.contactTitle i{
+    font-size: 1rem;
+    font-weight: initial;
+}
+.contactInfo, .contactData, .contactForm{
+    display: grid;
+}
+.contactInfo{
+    row-gap: 2rem;
+}
+.contactData{
+    row-gap: .75rem;
+}
+.contactData-Title{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+.contactData-Info{
+    font-size: var(--small-font-size);
+    font-family: var(--title-font);
+    color: var(--title-color);
+}
+
+.contactBtn{
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+.contactBtn i{
+    font-size: 1rem;
+    transition: transform .3s;
+}
+.contactBtn:hover i{
+    transform: translateX(.25rem);
+}
+.contactForm{
+    position: relative;
+    row-gap: 2rem;
+}
+.contactForm-div{
+    position: relative;
+    height: 4rem;
+}
+.contactForm-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-color-light);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    font-size: var(--normal-font-size);
+    font-family: var(--title-font);
+    color: var(--title-color);
+    background: none;
+    outline: none;
+    z-index: 1;
+}
+.contactForm-tag{
+    position: absolute;
+    top: -.75rem;
+    left: 1.25rem;
+    z-index: 10;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    padding: .35rem;
+}
+.contactForm-area{
+    height: 10rem;
+}
+.contactForm-area textarea{
+    resize: none;
+}
+.contactForm .contactBtn{
+    border: none;
+    background: none;
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+    font-weight: var(--font-semi-bold);
+    cursor: pointer;
+    outline: none;
+    margin-top: .75rem;
+}
+.contactForm .contactBtn i{
+    font-size: 1.5rem;
+    font-weight: initial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

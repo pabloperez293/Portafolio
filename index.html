@@ -479,25 +479,78 @@
                     </div>
             <!-- -------------- Swipper Pagination -->
                     <div class="swiper-pagination"></div>
-
-
                 </div>
             </div>
         </section>
 
+        <!-- Contactoo -->
+        <section class="contact section" id="contact">
+            <h2 class="sectionTitle"> Informacion </h2>
+            <span class="sectionSubtitle">Mis datos</span>
 
+            <div class="contactContainer container grid sectionBorder">
+                <div class="contactContent">
+                    <h3 class="contactoTitle">
+                        <i class="ri-chat-smile-3-line"></i> Hablemos
+                    </h3>
 
+                    <div class="contactInfo">
+                        <div class="contactData">
+                            <span class="contactData-Title">Email</span>
+                            <span class="contactData-Info">paperezpablo@gmail.com</span>
+                       </div>
 
+                       <div class="contactData">
+                            <span class="contactData-Title">Whatsapp</span>
+                            <span class="contactData-Info">+54 1157576175</span>  
+                        <!-- Numero de wzp -->
+                            <a href="https://api.whatsapp.com/send?phone=541157576175&text=Hola, en que te puedo ayudar?" target="_blank" class="contactBtn">
+                                Charlemos<i class="ri-arrow-right-circle-line"></i>
+                            </a>
+                       </div>
+                      
+                    </div>
+                </div>
+                
+                <div class="contactContent">
+                    <h3 class="contactTitle">
+                        <i class="ri-mail-send-line"></i> Queres un asesoramiento?
+                    </h3>
 
+                    <form action="" class="contactForm" id="contactForm">
+                        <div class="contactForm-div">
+                            <label class="contactForm-tag">Nombre</label>
+                            <input type="text" name="user_name" required placeholder="Nombre" class="contactForm-input" id="contactName">
+                        </div>
 
+                        <div class="contactForm-div">
+                            <label for="" class="contactForm-tag">Correo</label>
+                            <input type="text" name="user_email" required placeholder="ingrese el correo" class="contactForm-input" id="contactEmail">
+                        </div>
 
+                        <div class="contactForm-div contactForm-area" >
+                            <label class="contactForm-tag"> Proyectos</label>
+                            <texteare name="user_project" placeholder="Cuentame de tus ideas" class="contactForm-input" id="contactProject"></texteare>
+                        </div>
+                        
+                        <p class="contactMessage" id="contactMessage">Mensaje</p>
+
+                        <button type="submit" class="contactBtn">
+                            Enviar<i class="ri-arrow-right-up-line"></i>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
 
     </main>
 <!-- footer -->
 <footer class="footer">
 
 </footer>
-<!-- scrooll -->
+<!-- Email -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <!-- Swiper javascript -->
 <script src="js/swiper-bundle.min.js"></script>

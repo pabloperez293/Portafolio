@@ -25,6 +25,7 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener("click", linkAction))
 
 // ----------Swiper projects 
+
 let swiperProjects = new Swiper(".projectsContainer", {
     loop:true,
     spaceBetween: 24,
@@ -43,3 +44,11 @@ let swiperProjects = new Swiper(".projectsContainer", {
         },
       },
   });
+
+  // ---------------> Correo 
+  const contactForm = document.getElementById("contactForm");
+  const contactName = document.getElementById("contactName");
+  const contactEmail = document.getElementById("contactEmail");
+  const contactProject = document.getElementById("contactProject");
+  const contactMessaje = document.getElementById("contactMessaje");
+

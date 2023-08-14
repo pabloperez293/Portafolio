@@ -74,11 +74,17 @@ const sendEmail = (evt) => {
       contactMessage.classList.add('color-blue');
       contactMessage.textContent = 'Mensaje enviado '
 
-      // Remover mensaje viejo
+      // Remover mensaje viejo mas de 5s
       setTimeout(( ) =>{
         contactMessage.textContent = ''
       }, 5000)
+    }, (error) => {
+      alert(" Algo ocurrio en el envio ", error)
     })
+    // borrado de inputs cuando envia info
+    contactName.value = ''
+    contactEmail.value = ''
+    contactProject.value = ''
   }
 }
 contactForm.addEventListener("submit",sendEmail)

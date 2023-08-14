@@ -594,7 +594,20 @@ img{
     font-size: 1.5rem;
     font-weight: initial;
 }
+.contactMessage{
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: 2.8rem;
+    left: 1.5rem;
+}
 
+/* color de estado del mensaje */
+.color-red{
+    color: hsl(4, 71%, 50%);
+}
+.color-blue{
+    color: blue;
+}
 
 
 

@@ -40,14 +40,15 @@ let swiperProjects = new Swiper(".projectsContainer", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    pagination: {
+    pagination: { 
       el: ".swiper-pagination",
     },
     breakpoints: {
         1200: {
           slidesPerView: 2,
           spaceBetween: -56,
-        },
+        }
+       
       },
   });
 
@@ -88,3 +89,36 @@ const sendEmail = (evt) => {
   }
 }
 contactForm.addEventListener("submit",sendEmail)
+
+// Scroll activado por sectiones del link 
+
+const sections = document.querySelectorAll('section[id]');
+
+const scrollActive = () => {
+  const scrollY = window.pageXOffset;
+
+  sections.forEach( current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 58;
+  
+      const sectionId = current.getAttribute('id');
+      const sectionsClass = document.querySelector('.navMenu a[href*=' + sectionId + ']');
+  
+      if( scrollY > sectionTop && scrollY <= sectionTop + sectionHeight ){
+        sectionsClass.classList.add('activeLink');
+      }else{
+        sectionsClass.classList.remove('activeLink');
+      }
+    }  )
+    window.addEventListener('scroll', scrollActive)
+
+}
+
+// Scrull up 
+
+// const scrollUp = () =>{
+//   const scrollUp = document.getElementById('scrollUp');
+//   this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+//   :scrollUp.classList.remove('show-scroll')
+// }
+// window.addEventListener('scrollUp',scrollUp)

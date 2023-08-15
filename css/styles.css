@@ -85,7 +85,19 @@ img{
     height: auto;
 }
 
+/* temas */
+.navButtons{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.changeTheme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
 
+}
 /* css clases */
 .container{
     max-width: 1024px;
@@ -201,6 +213,10 @@ img{
     bottom: 2rem;
 }
 
+/* activacion de link  */
+.activeLink{
+    color: var(--title-color);
+}
 /* home */
 .homeContainer{
     row-gap: 4rem;
@@ -610,13 +626,86 @@ img{
 }
 
 /* --------> Footer  */
+.footerContainer{
+    padding: 3rem 0 7rem;
+    text-align: center;
+}
+.footerTitle{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 1rem;
+}
 
+.footerList,.footerSocial{
+    display: flex;
+    justify-content: center;
+}
+.footerList{
+    margin: 2.5rem 0;
+    column-gap: 2.5rem;
+}
+.footerLink{
+    color: var(--title-color);
+}
+.footerLink:hover{
+    text-decoration: underline;
+}
+.footerSocial{
+    column-gap: 1.25rem;
+}
+.footerSocial-link{
+    font-size: 1.30rem;
+    color: var(--title-color);
+    transition: transform .3s;
+}
+.footerSocial-link:hover{
+    transform: translateY(-.15rem);
+}
+.footerCopy{
+    display: block;
+    margin-top: 4.5rem;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
 
+/* ----------> Scrooll bar */
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(207, 4%, 75%);
+}
 
+::-webkit-scrollbar-thumb{
+    background-color: hsl(207, 4%, 65%);
+    border-radius: .5rem;
+}
 
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(207, 4%, 55%);
+}
 
-
-
+/* Scroll activado en el link  */
+.scrollUp{
+    position: fixed;
+    right: 1rem;
+    bottom: -30%;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 12px hsl(207, 24%, 35% , .15);
+    display: inline-flex;
+    padding: .35rem;
+    border-radius: .25rem;
+    font-size: 1.1rem;
+    color: var(--title-color);
+    z-index: var(--z-tooltip);
+    transition: bottom .3s, transform .3s;
+}
+.scrollUp:hover{
+    transform: translateY(-.25rem);
+}
+/* show scrollUP  */
+.show-scroll{
+    bottom: 7.5rem;
+}
 
 
 

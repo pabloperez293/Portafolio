@@ -116,9 +116,39 @@ const scrollActive = () => {
 
 // Scrull up 
 
-// const scrollUp = () =>{
-//   const scrollUp = document.getElementById('scrollUp');
-//   this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-//   :scrollUp.classList.remove('show-scroll')
-// }
-// window.addEventListener('scrollUp',scrollUp)
+const scrollUp = () =>{
+  const scrollUp = document.getElementById('scrollUp');
+  this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                        :scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scrollUp',scrollUp)
+
+// Temas obscuro / Blanco 
+
+const themeButton = document.getElementById("themeBtn");
+const darkTheme = "darkTheme";
+const iconTheme = "ri-sun-line";
+// Selecionador de tema 
+const selectedTheme = localStorage.getItem("selectedTheme");
+const selectedIcon = localStorage.getItem("selectedIcon");
+// Validamos el tema
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? "ri-moon-line " : "ri-sun-line";
+
+// Validar si se eligio correctamente 
+if (selectedTheme) {
+  // si cumple la condicion
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme)
+  themeButton.classList[selectedIcon === "ri-moon-line " ? "add" : "remove"](iconTheme)
+}
+
+// Desactivar o activar los temas 
+themeButton.addEventListener("click", () => {
+
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+
+  localStorage.setItem("selectedTheme", getCurrentTheme())
+  localStorage.setItem("selectedIcon", getCurrentIcon())
+
+})

@@ -67,7 +67,8 @@ body{
     font-size: var(--normal-font-size);
     background-color:  var(--body-color);
     color: var(--text-color);
-    transition: ba;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 
 h1,h2,h3{
@@ -178,6 +179,8 @@ body.darkTheme{
     box-shadow: 0 4px 20px hsla(207,24%,35%, .1);
     padding-inline: 1.5rem;
     border-radius: 3rem;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 
 .navLogo, .navToggle , .navClose{
@@ -268,6 +271,8 @@ body.darkTheme{
     justify-self: center;
     border-radius: 6.25rem;
     place-items: center;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 .homePerfil{
     width: 170px;
@@ -344,6 +349,8 @@ body.darkTheme{
     border-radius: 3rem;
     place-items: center;
     margin-bottom: 1rem;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 .skillsBlob img{
     width: 40px;
@@ -429,6 +436,8 @@ body.darkTheme{
     text-align: center;
     padding: 3.5rem 1rem;
     border-radius: 7.25rem;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 .servicesCard i{
     display: block;
@@ -466,7 +475,7 @@ body.darkTheme{
 .projectsContainer{
     overflow: initial;
 }
-.projectContent{
+.projectsContent{
     display: grid;
     justify-content: center;
 }
@@ -617,6 +626,8 @@ body.darkTheme{
     font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
     padding: .35rem;
+    transition: background .5s; 
+    /* Solo para el modo dark   */
 }
 .contactForm-area{
     height: 10rem;
@@ -736,7 +747,109 @@ body.darkTheme{
     bottom: 7.5rem;
 }
 
+/*  Responsive */
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+    .navMenu{
+        padding-bottom: 4rem;
+    }
+    .navList{
+        gap: 1rem 1.25rem;
+    }
+    .skillsInfo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projectsImg{
+        width: 200px;
+        justify-self: center;
+    }
+}
+/* Responsives Md */
+@media screen and (min-width: 576px){
+    .nav , .navMenu{
+        width: 380px;
+    }
+    .nav{
+        margin: 0 auto;
+    }
+    .skillsContainer{
+        justify-content: center;
+    }
+    .projectsContainer{
+        width: 400px;
+    }
+    .projectsContainer{
+        overflow: hidden;
+    }
+    .projectsContainer .swiper-button-prev{
+        left: 1rem;
+    }
+    .projectsContainer .swiper-button-next{
+        left: 1rem;
+    }
+}
+@media screen and (min-width: 767px){
+    .homeContainer{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .homeData{
+        order: 2;
+    }
+    .homeInfo:nth-child(3){
+        order: 3;
+        text-align: right;
+    }
+    .homeInfo{
+        margin-top: 10rem;
+    }
+    .homeInfo-description{
+        padding-right: 0;
+    }
+    .skillsContainer , .qualificationContainer , .servicesContainer , .contactContainer{
+        grid-template-columns: repeat(2, max-content);
+    }
+    .skillsContainer, .servicesContainer{
+        column-gap: 5rem;
+    }
+    .qualificationContainer{
+        justify-content: center;
+        column-gap: 10rem;
+    }
+    .projectsContainer{
+        widows: 500px;
+    }
+    .contactForm{
+        width: 360px;
+    }
+    .contactContainer{
+        justify-content: center;
+        column-gap: 8rem;
+    }
+}
 
-
-
-
+@media screen and (min-width: 1023px){
+    .header{
+        top: 0;
+        bottom: initial;
+        background-color:var(--body-color);
+        transition: .4s;
+    }
+    .nav{
+        width: initial;
+        height: calc(--header-height) + 1.5rem;
+        box-shadow: none;
+        border-radius: 0;
+        column-gap: 3rem;
+        margin-inline: 1.5rem;
+        padding: 0;
+    }
+    .navLink i, .navToggle , .navClose{
+        display: none;
+    }
+    .navMenu{
+        width: initial;
+    }
+    
+}

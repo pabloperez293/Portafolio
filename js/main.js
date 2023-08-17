@@ -162,3 +162,21 @@ const scrollHeader = () => {
                     : header.classList.remove("br-header")
   }
   window.addEventListener("scroll", scrollHeader)
+
+
+  // Scrooll animacion de la pagina
+
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    reset: true 
+    // animaciond repetida 
+  })
+
+  sr.reveal('.homeData , .projectsContainer , .footerContainer')
+  sr.reveal('.homeInfo div', {delay:600, origin: 'bottom', interval: 100})
+  sr.reveal('.skillsContent:nth-child(1),  .contactContent:nth-child(1)',{ origin: 'left'})
+  sr.reveal('.skillsContent:nth-child(2) , .contactContent:nth-child(2) ',{ origin: 'right'})
+  sr.reveal('.qualificationContent, .servicesCard',{ interval: 100})

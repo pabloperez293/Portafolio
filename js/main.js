@@ -117,9 +117,10 @@ const scrollActive = () => {
 // Scrull up 
 
 const scrollUp = () =>{
-  const scrollUp = document.getElementById('scrollUp');
+  const scrollUp = document.getElementById('scrollUp')
+
   this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                        :scrollUp.classList.remove('show-scroll')
+  :scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scrollUp',scrollUp)
 
@@ -152,3 +153,12 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selectedIcon", getCurrentIcon())
 
 })
+
+// --------- Cambios en el header
+const scrollHeader = () => {
+  const header = document.getElementById("header")
+
+  this.scrollY >= 50? header.classList.add("br-header")
+                    : header.classList.remove("br-header")
+  }
+  window.addEventListener("scroll", scrollHeader)

@@ -118,6 +118,7 @@ body.darkTheme{
 .darkTheme .sectionBorder{
     border-bottom: 1px solid hsl(207, 40%, 32%);
 }
+
 .darkTheme::-webkit-scrollbar{
     background-color: hsl(207, 4%, 15%);
 }
@@ -777,6 +778,7 @@ body.darkTheme{
     .skillsContainer{
         justify-content: center;
     }
+
     .projectsContainer{
         width: 400px;
     }

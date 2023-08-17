@@ -923,14 +923,13 @@ body.darkTheme{
         column-gap: 2rem;
     }
     .homeInfo{
-        grid-template-columns: repeat(3, 150px);
+        grid-template-columns: repeat(1, 250px);
         row-gap: 4rem;
         margin-top: 16rem;
     }
     .homeInfo-description{
         row-gap: 2rem;
         margin-top: 2rem;
-
     }
     .skillsContainer{
         column-gap: 10rem;

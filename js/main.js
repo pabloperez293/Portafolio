@@ -180,3 +180,19 @@ const scrollHeader = () => {
   sr.reveal('.skillsContent:nth-child(1),  .contactContent:nth-child(1)',{ origin: 'left'})
   sr.reveal('.skillsContent:nth-child(2) , .contactContent:nth-child(2) ',{ origin: 'right'})
   sr.reveal('.qualificationContent, .servicesCard',{ interval: 100})
+
+
+  // Cambio de idioma 
+
+  // let check = document.querySelector('.check');
+  //   check.addEventListener("click",idioma);
+
+  //   function idioma(){
+  //       let id = check.checked;
+
+  //       if( id == true ){
+  //         location.href = "es/index.html";
+  //       }else{
+  //         location.href = "../index.html";
+  //       }
+  //   }
